@@ -96,7 +96,7 @@ def response():
 
 @app.route("/get")
 def get_bot_reponse():
-    userText = request.args.get('message')
+    userText = request.args.get('msg')
     results, tag = process(userText)
     return results
 
