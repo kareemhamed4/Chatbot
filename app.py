@@ -82,7 +82,7 @@ def index():
 @app.route('/chatbotApi' , methods=['POST'])
 def response():
     try:
-        userText = request.args.get('msg')
+        userText = request.args.get('message')
         results, tag = process(userText)
         return jsonify({'response' : str(results)})
 
